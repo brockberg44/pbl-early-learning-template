@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PBL Interactive Unit Planning Template</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.5;
+}
+header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+details {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+label {
+    font-weight: bold;
+}
+.tooltip {
+    border-bottom: 1px dotted #555;
+    cursor: help;
+}
+@media print {
+    button {
+        display: none;
+    }
+}
+</style>
+<script>
+function saveToFile() {
+    const content = document.documentElement.outerHTML;
+    const blob = new Blob([content], { type: "text/html" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "PBL_Unit_Plan_Filled.html";
+    a.click();
+}
+</script>
+</head>
+<body>
+
+<header>
+    <button onclick="window.print()">🖨 Print Plan</button>
+    <button onclick="saveToFile()">💾 Save Plan</button>
+</header>
+
+<h1>Problem-Based Learning Unit Plan</h1>
+
+<details open>
+<summary>Unit Overview</summary>
+<label>Unit Title</label>
+<input type="text">
+
+<label>Age Group / Grade</label>
+<input type="text">
+
+<label>Time Frame</label>
+<input type="text">
+</details>
+
+<details>
+<summary>Driving Problem</summary>
+<label class="tooltip" title="A real-world, open-ended problem with no single correct answer.">Driving Problem</label>
+<textarea rows="4"></textarea>
+
+<label class="tooltip" title="Explain how this problem connects to children’s lived experiences.">Why is this meaningful?</label>
+<textarea rows="3"></textarea>
+</details>
+
+<details>
+<summary>Children’s Questions & Wonderings</summary>
+<textarea rows="5" placeholder="Capture children’s authentic questions and predictions."></textarea>
+</details>
+
+<details>
+<summary>Investigation Phases</summary>
+<label class="tooltip" title="How will you introduce the problem and spark curiosity?">Launch Phase</label>
+<textarea rows="3"></textarea>
+
+<label class="tooltip" title="Opportunities for exploration, testing ideas, and collaboration.">Exploration Phase</label>
+<textarea rows="3"></textarea>
+
+<label class="tooltip" title="How children share learning, solutions, or next questions.">Culmination Phase</label>
+<textarea rows="3"></textarea>
+</details>
+
+<details>
+<summary>Materials & Resources</summary>
+<textarea rows="4" placeholder="Include authentic tools, books, and materials."></textarea>
+</details>
+
+<details>
+<summary>IELDS Standards Alignment</summary>
+<label class="tooltip" title="Oral language, storytelling, documentation, and emergent writing.">Language Arts</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Counting, measuring, comparing, graphing, or spatial reasoning.">Mathematics</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Inquiry, observation, prediction, testing, and explanation.">Science</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Community, roles, relationships, and understanding the world.">Social Studies</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Visual arts, music, movement, drama, and creative expression.">The Arts</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Gross motor, fine motor, health, and safety skills.">Physical Development & Health</label>
+<textarea rows="2"></textarea>
+
+<label class="tooltip" title="Self-regulation, collaboration, empathy, and persistence.">Social-Emotional Development</label>
+<textarea rows="2"></textarea>
+</details>
+
+<details>
+<summary>Assessment & Documentation</summary>
+<label class="tooltip" title="Observation notes, photos, child work samples, and reflection conversations.">Assessment Strategies</label>
+<textarea rows="4"></textarea>
+</details>
+
+<details>
+<summary>Teacher Reflection</summary>
+<label class="tooltip" title="Reflect on what worked, surprises, and next steps.">Reflection</label>
+<textarea rows="4"></textarea>
+</details>
+
+</body>
+</html>
